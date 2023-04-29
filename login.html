@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       form{
+        background-color: white;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        border-radius: 10px;
+        padding: 20px;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       form>div{
+        display: flex;
+        flex-direction: row;
+       }
+       form>div>p{
+        margin-left: 160px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: -1px;
+        color: blue;
+       }
+       input[type="email"],input[type="password"]{
+        width: 100%;
+            margin-bottom: 10px;
+            resize: vertical;
+            box-sizing: border-box;
+            height: 40px;
+       }
+       #submit{
+        width: 40%;
+        font-weight: bold;
+        border: none;
+        background-color: black;
+        color: white;
+        height: 40px;
+        border-radius: 30px;
+       }
+       #CreateAccount{
+        width: 40%;
+        font-weight: bold;
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        height: 40px;
+        border-radius: 30px;
+       }
+      
+       #CreateAccount+p{
+        margin: auto;
+        text-decoration: underline;
+        color: blue;
+        margin-top: 20px;
+       }
+       hr{
+        border: 1px solid gray;
+       }
+    #login{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:20% ;
+        
+       
+    }
+    #login>div>img{
+        height: 30px;
+        width: 30px;
+       
+    }
+    #login>a{
+        text-decoration: none;
+        font-size: 25px;
+        color: black;
+    }
+    body{
+        background-color: rgb(147, 145, 151);
+    }
+
+    *{
+       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+
+       
+        
+        .keepMe{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        @media (min-width: 440px) and (max-width: 545px) {
+          form{
+            width: 400px;
+          }
+        }
+        @media (min-width: 300px) and (max-width: 400PX) {
+            form{
+            width: 300px;
+          }
+        }
+        @media (min-width: 200px) and (max-width: 300PX) {
+            form{
+            width: 250px;
+          }
+        }
+
+
+       
+        
+        /* *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        } */
+        body{
+            font-family: montserrat;
+        }
+        nav{
+             
+             margin-bottom: 80px;
+             margin-top: -10px;
+             box-shadow: rgba(165, 143, 143, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(253, 251, 251, 0.09) 0px -3px 5px;
+          
+             background: #2b1c6d;
+             height: 60px;
+             width: 100%;
+         }
+         label.logo{
+             color: white;
+             font-size: 35px;
+             line-height: 60px;
+             padding: 0 100px;
+             font-weight: bold;
+             margin-left: 50px;
+         }
+         nav ul{
+             float: right;
+             margin-right:  140px;
+             margin-top: 0;
+             
+         }
+         nav ul li{
+            display: inline-block;
+            line-height: 60px;
+            margin:  0 5px;
+        
+         }
+         nav ul li a{
+             color: rgb(243, 243, 243);
+             font-size: 17px;
+             border-radius: 3px;
+             padding: 7px 13px;
+             text-decoration: none;
+             text-transform:uppercase ;
+         }
+         a.active,a:hover{
+             background: #0c0f12;
+             transition: .5s;
+         }
+         .checkbtn{
+             font-size: 30x;
+             color: rgb(249, 248, 248);
+             float: right;
+             line-height: 60px;
+             margin-right: 40px;
+             cursor: pointer;
+             display: none;
+         }
+         #check{
+             display: none;
+         }
+         @media (max-width : 1015px) {
+             label.logo{
+                 font-size: 30px;
+                 padding-left: 50px;
+             }
+             nav ul li a{
+                 font-size: 16px;
+             }
+         }
+         @media (max-width : 980px) {
+             
+             
+            .checkbtn{
+                 display: block;
+             }
+             ul{
+                 position: fixed;
+                 width: 100%;
+                 height: 100vh;
+                 background-color: #1b0439;
+                 top: 80px;
+                 left: -120%;
+                 text-align: center;
+                 transition: all .5s;
+             }
+             nav ul li{
+                 display: block;
+                 margin: 50px 0px;
+                 line-height: 30px;
+             }
+             nav ul li a{
+                 font-size: 20px;
+             }
+             a.active,a.hover{
+                 background: none;
+                 color: #ebf1f5;
+             }
+             #check:checked ~ ul{
+                 left: 0;
+             }
+         }
+         @media (min-width: 250px) and (max-width: 454px) {
+   /* CSS styles for tablets and small desktops */
+           
+             label.logo{
+                 margin-left: 0px;
+             }
+         }
+        
+     
+    </style>
+</head>
+<body>
+     
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Tracker</label>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            
+        </ul>
+    
+    
+    </nav>
+        
+    <form action="">
+        <h4>Sign in to Tracker?</h4>
+        <input type="email" id="email"  placeholder="Email Address*">
+        <input type="password" id="password" placeholder="Password*">
+        
+        
+        <div class="keepMe">
+            <div>
+                <input type="checkbox" id="keep" name="keep" placeholder="">
+                <label for="">Keep me signed in</label>
+            </div>
+            <div>
+                <p>Forget password?</p>
+            </div>
+           
+        </div>
+        
+        
+        <input type="submit" id="submit" >
+        <hr>
+        <h4>New to Tracker?</h4>
+        <button  id="CreateAccount" href="Signup.html" onclick="signupFun()" value="Create Account">Create Account</button>
+        <p>Term of Use & Privacy Policy</p>
+    </form>
+</body>
+</html>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" >
+ 
+ 
+
+
+ let form =  document.querySelector("form")
+  let signin = JSON.parse(localStorage.getItem("usersignidata"))||[]
+ let signindata = JSON.parse( localStorage.getItem("userdata"))||[]
+  form.addEventListener("submit",function(event){
+    event.preventDefault()
+    let data  = {
+        email : form.email.value,
+        password:form.password.value,
+    }
+   if(chechksignin(data.email,data.password)===true){
+        signin.push(data)
+        localStorage.setItem("usersigndata",JSON.stringify(signin))
+        alert("login successsfull")
+        location.assign("index.html")
+       
+        
+   }
+   else{
+    alert("Wrong username or password")
+   }
+   
+  })
+function chechksignin(email,password){
+    let filtered = signindata.filter(function(element){
+        return element.email===email&&element.password===password
+    })
+    if(filtered.length>0){
+        return true
+    }
+    else{
+        return false
+    }
+}
+ 
+ 
+</script>

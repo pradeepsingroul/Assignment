@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: montserrat;
+        }
+        nav{
+            box-shadow: rgba(165, 143, 143, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(253, 251, 251, 0.09) 0px -3px 5px;
+            
+            background: #2b1c6d;
+            height: 60px;
+            width: 100%;
+        }
+        label.logo{
+            color: white;
+            font-size: 35px;
+            line-height: 60px;
+            padding: 0 100px;
+            font-weight: bold;
+            margin-left: 50px;
+        }
+        nav ul{
+            float: right;
+            margin-right:  140px;
+
+        }
+        nav ul li{
+           display: inline-block;
+           line-height: 60px;
+           margin:  0 5px;
+
+        }
+        nav ul li a{
+            color: rgb(250, 246, 246);
+            font-size: 17px;
+            border-radius: 3px;
+            padding: 7px 13px;
+            text-transform:uppercase ;
+        }
+        a.active,a:hover{
+            background: #0c0f12;
+            transition: .5s;
+        }
+        .checkbtn{
+            font-size: 30x;
+            color: rgb(249, 248, 248);
+            float: right;
+            line-height: 60px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        @media (max-width : 952px) {
+            label.logo{
+                font-size: 30px;
+                padding-left: 50px;
+            }
+            nav ul li a{
+                font-size: 16px;
+            }
+        }
+        @media (max-width : 980px) {
+            .container{
+               display: flex;
+               flex-direction: column;
+            }
+
+            .container>div{
+                width: 100%;
+            }
+            .sec{
+                margin-top: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .checkbtn{
+                display: block;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color: #98959c;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+            nav ul li{
+                display: block;
+                margin: 50px 0px;
+                line-height: 30px;
+            }
+            nav ul li a{
+                font-size: 20px;
+            }
+            a.active,a.hover{
+                background: none;
+                color: #0082e6;
+            }
+            #check:checked ~ ul{
+                left: 0;
+            }
+        }
+        @media (min-width: 250px) and (max-width: 454px) {
+  /* CSS styles for tablets and small desktops */
+          
+            label.logo{
+                margin-left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Tracker</label>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            
+        </ul>
+    
+    
+    </nav>
+</body>
+</html>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>

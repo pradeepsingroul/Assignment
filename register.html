@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+     
+
+    #sign{
+            border: 1px red solid;
+            background-color: rgb(232, 232, 232);
+            width: 500px;
+            border-radius: 10px;
+            padding: 20px;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        div>hr{
+          color: gray;
+        }
+        div>h3{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       
+        form{
+            width: 100%;
+            display: block;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        input[type="text"]{
+            width: 49%;
+            
+            margin-bottom: 10px;
+            height: 40px;
+        }
+        #month,#day{
+            width: 49%;
+            margin-bottom: 10px;
+            height: 40px;
+        }
+        input[type="email"],input[type="password"],input[type="tel"],input[type="number"]{
+            width: 100%;
+            margin-bottom: 10px;
+            resize: vertical;
+            box-sizing: border-box;
+            height: 40px;
+          
+        }
+        .img2{
+            width: 7%;
+        }
+        input[type="submit"]{
+            border: none;
+            padding: 15px 70px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 35px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        #spe{
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: -5px;
+        }
+        hr+p,hr+p+p{
+            font-size: 12px;
+        }
+        
+        body{
+            background-color: rgb(147, 145, 151);
+        }
+
+
+        *{
+
+            box-sizing: border-box;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        /* *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        } */
+        body{
+            font-family: montserrat;
+        }
+        nav{
+             
+            margin-bottom: 80px;
+            margin-top: -10px;
+            box-shadow: rgba(165, 143, 143, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(253, 251, 251, 0.09) 0px -3px 5px;
+         
+            background: #2b1c6d;
+            height: 60px;
+            width: 100%;
+        }
+        label.logo{
+            color: white;
+            font-size: 35px;
+            line-height: 60px;
+            padding: 0 100px;
+            font-weight: bold;
+            margin-left: 50px;
+        }
+        nav ul{
+            float: right;
+            margin-right:  140px;
+            margin-top: 0;
+            
+        }
+        nav ul li{
+           display: inline-block;
+           line-height: 60px;
+           margin:  0 5px;
+       
+        }
+        nav ul li a{
+            color: rgb(243, 243, 243);
+            font-size: 17px;
+            border-radius: 3px;
+            padding: 7px 13px;
+            text-decoration: none;
+            text-transform:uppercase ;
+        }
+        a.active,a:hover{
+            background: #0c0f12;
+            transition: .5s;
+        }
+        .checkbtn{
+            font-size: 30x;
+            color: rgb(249, 248, 248);
+            float: right;
+            line-height: 60px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        @media (max-width : 1015px) {
+            label.logo{
+                font-size: 30px;
+                padding-left: 50px;
+            }
+            nav ul li a{
+                font-size: 16px;
+            }
+        }
+        @media (max-width : 980px) {
+            .container{
+               display: flex;
+               flex-direction: column;
+            }
+
+            .container>div{
+                width: 100%;
+            }
+            .sec{
+                margin-top: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .checkbtn{
+                display: block;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color: #1b0439;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+            nav ul li{
+                display: block;
+                margin: 50px 0px;
+                line-height: 30px;
+            }
+            nav ul li a{
+                font-size: 20px;
+            }
+            a.active,a.hover{
+                background: none;
+                color: #ebf1f5;
+            }
+            #check:checked ~ ul{
+                left: 0;
+            }
+        }
+        @media (min-width: 250px) and (max-width: 454px) {
+  /* CSS styles for tablets and small desktops */
+          
+            label.logo{
+                margin-left: 0px;
+            }
+        }
+        @media(min-width: 400px) and (max-width: 524px){
+            #sign{
+                width: 400px;
+                border: 1px rgb(10, 2, 2) solid;
+            }
+        }
+        @media(min-width: 300px) and (max-width: 400px){
+            #sign{
+                width: 300px;
+                border: 1px rgb(10, 2, 2) solid;
+            }
+        }
+        @media(min-width: 200px) and (max-width: 300px){
+            #sign{
+                width: 200px;
+                border: 1px rgb(10, 2, 2) solid;
+            }
+        }
+      
+
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Tracker</label>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            
+        </ul>
+    
+    
+    </nav>
+
+<div id="sign">
+    <h3>Create an Account</h3>
+    <hr>
+   <form action="" id="form">
+    <div >
+    <input type="text" id="Fname" name="Fname" placeholder="First Name">
+    <input type="text" id="Lname" name="Lname" placeholder="Last Name">
+    </div>
+    <input type="email" id="email" name="email" placeholder="Email Address">
+    <input type="password" id="password" name="password" placeholder="Password(6 to 12 character)">
+    <input type="tel" id="mobile" name="mobile" placeholder="Phone Number">
+    <div id="spe">
+     <img class="img2" src="https://www.sephora.com/img/ufe/icons/birthday.svg" alt=""> <p> Enter your birthdate.</p>
+    </div >
+    <input type="month" name="month" id="month" placeholder="Month" >
+    <input type="number" id="day" name="day" placeholder="Day" min="1" max="31">
+    <div>
+    
+        <input type="checkbox" id="keep" name="keep" placeholder="">
+        <label for="">Keep me signed in</label>
+    </div>
+    <hr>
+    <input type="submit" id="submit" value="submit">
+   </form>
+   <hr>
+   
+</div>
+  
+</body>
+</html>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script>
+
+var form = document.querySelector("form")
+var  signupDATA = JSON.parse(localStorage.getItem("userdata"))||[]
+form.addEventListener("submit", function(event){
+    event.preventDefault()
+    let data  =  {
+        Fname: form.Fname.value,
+        Lname: form.Lname.value,
+        email:form.email.value,
+        password: form.password.value,
+        phone : form.mobile.value,
+        date_of_birth :form.month.value +"-"+ form.day.value
+
+
+    }
+    //checkemail(data.email)
+    if(checkemail(data.email)===true){
+        signupDATA.push(data)
+        localStorage.setItem("userdata",JSON.stringify(signupDATA))
+        alert("successfully signup")
+        location.assign("login.html")
+       
+    }
+    else{
+        alert("Account Already Exists")
+    }
+})
+
+function checkemail(email){
+    var filtered = signupDATA.filter(function(element){
+        return email === element.email
+    })
+    if(filtered.length>0){
+        console.log("sdghs")
+        return false;
+    }
+    else{
+        console.log("sdfgsdfhyt")
+        return true;
+    }
+   
+}
+</script>
